@@ -2,6 +2,7 @@ import myPhoto from "@assets/Yo.JPG";
 
 function About(){
     return(
+        <>
         <div className="about-section">
             <section id="about" className="section-title">
                 <h2>ABOUT ME</h2>
@@ -11,10 +12,11 @@ function About(){
                 I'm especially curious about the intersection of AI tools and photography—a hobby where I love experimenting with visuals and creativity. Outside the screen, you'll often find me on the softball field, painting, or working on handmade crafts.
                 {/* Go to Professional for my Work Experiences and Academics. */}
             </p>
-            <div className="img-about">
-                <img src={myPhoto} alt="Marines García" />
-            </div>
         </div>
+        <div className="img-about">
+                <img src={myPhoto} alt="Marines García" />
+        </div>
+        </>
     );
 }
 
