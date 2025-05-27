@@ -43,19 +43,40 @@
   word-wrap: break-word;
 }
 
-/* Columna de imagen */
+/* My Image */
 .img-about {
-  width: 50%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 300px; /* ajusta según tu diseño */
+  height: auto;
+  display: block;
 }
 
 .img-about img {
-  width: 50%;
+  width: 100%;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-  z-index: 2;
-
+  display: block;
 }
 
+.button-cv{
+  position: absolute;
+  left: 50%;
+  margin-top: 15rem;
+  text-align: center;
+  width: fit-content;
+  z-index: 2;
+}
 
+.description{
+   font-family: 'Arapey', serif;
+    font-style: italic;
+    font-size: 1rem;
+    margin: 1%;
+    margin-right: 50%;
+    color: #3a2c25;
+}
 

@@ -1,9 +1,15 @@
 import myPhoto from '@assets/Yo.JPG'
+import resumeFile from '@assets/CV Marinés garcía.pdf'; 
+import '@styles/About.css'
+
 function MyImg(){
     return(
-    <button className='column img-about'>
-        <img src={myPhoto} alt="Marines García" />
-    </button>
+        <div className='button-cv'>
+            <a href={resumeFile} download className='img-about'>
+                <img src={myPhoto} alt="Marines García" />
+            </a>
+            <p className='description'>Press image to download Resume</p>
+        </div>
 );
 }
 

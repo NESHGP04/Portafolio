@@ -23,7 +23,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 200vh;
-  width: 200ch;
+  width: 170ch;
   display: flex;
   justify-content: center;
   align-items: flex-start; 
@@ -72,7 +72,7 @@ body {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   position: absolute;
-  left: 0%;
+  left: 3%;
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
   background-color: #3a2c25;
