@@ -22,11 +22,13 @@ body {
   background-image: url('@assets/Background.png');
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 200vh;
+  width: 200ch;
   display: flex;
   justify-content: center;
   align-items: flex-start; 
   padding-top: 10vh; 
+  z-index: -1;
 }
 
 .title-container {
@@ -70,7 +72,7 @@ body {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   position: absolute;
-  left: 5%;
+  left: 0%;
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
   background-color: #3a2c25;

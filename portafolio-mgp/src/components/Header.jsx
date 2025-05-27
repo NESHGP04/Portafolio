@@ -1,8 +1,10 @@
 // src/components/Header.jsx
+import { useNavigate } from 'react-router-dom';
 import '@styles/Home.css';
 import clock from '@/assets/relojs.png';
 
 const Header = () => {
+  const navigate = useNavigate();
   const today = new Date().toLocaleDateString('en-GB'); // dd/mm/yy
 
   return (
@@ -24,7 +26,7 @@ const Header = () => {
 
       <nav className="nav-bar">
         <a href="#about">About Me</a>
-        <a href="#labs">My Labs</a>
+        <a onClick={() => navigate(`/my-labs`)}>My Labs</a>
         {/* <a href="#projects">My Projects</a>
         <a href="#tools">Tools I Use</a>
         <a href="#professional">Professional</a> */}

@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "@styles/Home.css";
 import "@styles/About.css";
 
-import Header from '@components/home/Header'
-import About from "@components/home/About";
+import Header from '@components/Header'
+import About from "@components/About";
+import MyImg from "@components/MyImg";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -14,6 +15,8 @@ export default function Home() {
         <Header />
 
         <About />
+
+        <MyImg />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.about-section {
+.labs-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,17 +6,31 @@
   padding: 10rem 5%;
   gap: 3rem;
   max-width: 100%;
-  z-index: 1;
 }
 
 .text-column {
   width: 50%;
 }
 
-.section-title {
+.text-about {
+  text-align: left;
+  font-family: 'Arapey', serif;
+  color: #3a2c25;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  word-wrap: break-word;
+}
+
+.about-section {
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.labs-title {
   position: absolute;
   left: 5%;
-  margin-top: 16rem;
+  margin-top: 30rem;
   text-align: center;
   font-family: 'The Seasons', serif;
   font-size: 1.7rem;
@@ -25,14 +39,14 @@
   text-transform: uppercase;
   color: #3a2c25;
   border-bottom: 1px solid #3a2c25;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.1rem;
   width: fit-content;
 }
 
 .text-about {
   position: absolute;
   left: 5%;
-  top: 20rem;
+  top: 30rem;
   width: 40vw;
   text-align: left;
   font-family: 'Arapey', serif;
@@ -46,15 +60,15 @@
 /* Columna de imagen */
 .img-about {
   width: 50%;
+  margin-top: 100px;
+  margin-right: 100px;
 }
 
 .img-about img {
-  width: 50%;
+  width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 5px;
   object-fit: cover;
-  z-index: 2;
-
 }
 
 

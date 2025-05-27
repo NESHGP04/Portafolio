@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import '@styles/App.css'
 
 import Home from '@pages/Home'
+import Labs from '@components/Labs';
 
 function App() {
 
@@ -10,6 +11,8 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route path="/my-labs" element={<Labs />} />
         </Routes>
     </BrowserRouter>
   )
