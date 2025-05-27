@@ -1,0 +1,55 @@
+.portfolio-header {
+  border-bottom: 2.5px solid #3a2c25;
+  font-family: 'The Seasons', serif;
+  position: relative;
+  padding: 1rem 20rem;
+}
+
+.about-section {
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.section-title {
+  position: absolute;
+  left: 5%;
+  margin-top: 17rem;
+  text-align: center;
+  font-family: 'The Seasons', serif;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #3a2c25;
+  border-bottom: 1px solid #3a2c25;
+  padding-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.text-about {
+  position: absolute;
+  left: 5%;
+  top: 30rem;
+  width: 40vw;
+  text-align: left;
+  font-family: 'Arapey', serif;
+  color: #3a2c25;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  word-wrap: break-word;
+}
+
+.img-about {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
