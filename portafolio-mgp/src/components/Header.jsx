@@ -25,7 +25,7 @@ const Header = () => {
       </div>
 
       <nav className="nav-bar">
-        <a href="#about">About Me</a>
+        <a href="#about" onClick={() => navigate(`/`)}>About Me</a>
         <a onClick={() => navigate(`/my-labs`)}>My Labs</a>
         {/* <a href="#projects">My Projects</a>
         <a href="#tools">Tools I Use</a>

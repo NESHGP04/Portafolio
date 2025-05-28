@@ -17,7 +17,7 @@ body {
 }
 
 
-/* Fondo edificios */
+/* Fondo */
 .background {
   background-image: url('@assets/Background.png');
   background-size: cover;

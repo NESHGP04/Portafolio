@@ -46,7 +46,6 @@
 /* My Image */
 .img-about {
   padding: 0;
-  border: none;
   background: none;
   cursor: pointer;
   width: 300px; /* ajusta según tu diseño */
@@ -56,6 +55,7 @@
 
 .img-about img {
   width: 100%;
+  border: 1px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
