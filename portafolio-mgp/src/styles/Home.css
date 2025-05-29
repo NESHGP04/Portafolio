@@ -22,12 +22,16 @@ body {
   background-image: url('@assets/Background.png');
   background-size: cover;
   background-position: center;
-  height: 200vh;
-  width: 170ch;
+  background-repeat: no-repeat;
+
+  height: 250vh;
+  width: 245vh;
+
   display: flex;
   justify-content: center;
   align-items: flex-start; 
   padding-top: 10vh; 
+
   z-index: -1;
 }
 
@@ -72,12 +76,12 @@ body {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   position: absolute;
-  left: 3%;
+  left: 2%;
   top: 50%;
   transform: translateY(-50%) rotate(180deg);
   background-color: #3a2c25;
   color: white;
-  padding: 4rem 1.5rem;
+  padding: 5rem 1.5rem;
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
