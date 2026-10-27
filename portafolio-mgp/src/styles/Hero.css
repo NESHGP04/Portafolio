@@ -1,0 +1,316 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem 9rem;
+}
+
+/* ---------- Estado / disponibilidad ---------- */
+.hero__status {
+  position: absolute;
+  top: 9.5rem;
+  left: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1.6rem 0.9rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.hero__status img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero__status strong {
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.hero__available {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  opacity: 0.95;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #3ddc5a;
+  box-shadow: 0 0 0 3px rgba(61, 220, 90, 0.3);
+}
+
+/* ---------- Titular ---------- */
+.hero__headline {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.hero__hi {
+  margin: 0 0 -0.35em;
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-nes);
+  font-size: clamp(3.6rem, 9vw, 8rem);
+  line-height: 1;
+  color: var(--accent-yellow);
+  transform: rotate(-4deg);
+  transform-origin: left bottom;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  animation: rise 0.8s 0.05s both;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.1rem, 5.6vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  animation: rise 0.8s 0.18s both;
+}
+
+/* ---------- Stickers ---------- */
+.hero__stickers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sticker {
+  --r: 0deg;
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.4rem 0.7rem 3.4rem;
+  border-radius: 0.9rem;
+  background: #f4f6e8;
+  color: #1b1b1b;
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.7vw, 1.35rem);
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(10, 30, 20, 0.25);
+  transform: rotate(var(--r));
+  animation: float 5s ease-in-out infinite;
+
+  /* el contenedor ignora el mouse, pero los stickers se pueden arrastrar */
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.sticker.is-dragging {
+  cursor: grabbing;
+  z-index: 5;
+  animation-play-state: paused;
+  box-shadow: 0 20px 36px rgba(10, 30, 20, 0.35);
+}
+
+.sticker__icon {
+  position: absolute;
+  left: -0.8rem;
+  top: -0.9rem;
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--tone);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sticker__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.sticker__clip {
+  position: absolute;
+  left: 2.2rem;
+  top: -0.7rem;
+  width: 0.5rem;
+  height: 1.4rem;
+  border: 2px solid var(--tone);
+  border-radius: 1rem;
+  transform: rotate(35deg);
+  opacity: 0.8;
+}
+
+.sticker--green  { --tone: var(--accent-green);  --r: 8deg;  top: -9%;  right: -5%;  animation-delay: 0s; }
+.sticker--pink   { --tone: var(--accent-pink);   --r: 4deg;  top: 30%;  right: -19%; animation-delay: -1.6s; }
+.sticker--purple { --tone: var(--accent-purple); --r: -9deg; top: 106%; left: 6%;    animation-delay: -3.2s; }
+
+/* ---------- Frase inferior izquierda ---------- */
+.hero__blurb {
+  position: absolute;
+  left: 2.5rem;
+  bottom: 3rem;
+  margin: 0;
+  max-width: 17rem;
+  font-family: var(--font-nes);
+  font-size: 2rem;
+  line-height: 1.05;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hero__blurb span {
+  display: block;
+  padding-left: 2.2rem;
+}
+
+/* ---------- Tarjeta de proyecto ---------- */
+.hero__project {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 2.5rem;
+  width: min(24rem, 40vw);
+}
+
+.hero__project-stack,
+.hero__project-stack::before {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  top: -0.5rem;
+  height: 2rem;
+  border-radius: 1.4rem 1.4rem 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--glass-border);
+  border-bottom: 0;
+}
+
+.hero__project-stack::before {
+  content: '';
+  left: 0.9rem;
+  right: 0.9rem;
+  top: -0.5rem;
+}
+
+.hero__project-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.7rem 1.2rem 0.7rem 0.7rem;
+  border-radius: 1.4rem;
+  transition: transform 0.25s ease;
+}
+
+.hero__project:hover .hero__project-card {
+  transform: translateY(-4px);
+}
+
+.hero__project-card img {
+  width: 5.2rem;
+  height: 5.2rem;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 0.9rem;
+}
+
+.hero__project-text {
+  display: grid;
+  gap: 0.15rem;
+  line-height: 1.2;
+}
+
+.hero__project-text small {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.hero__project-text strong {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.hero__project-arrow {
+  align-self: end;
+  font-size: 1.1rem;
+}
+
+/* ---------- Animaciones ---------- */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px) rotate(var(--rise-r, 0deg)); }
+}
+
+.hero__hi { --rise-r: -4deg; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--r)); }
+  50%      { transform: translateY(-9px) rotate(calc(var(--r) + 2deg)); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .hero__status { top: 6rem; left: 1.5rem; }
+  .hero__blurb  { left: 1.5rem; font-size: 1.6rem; }
+  .hero__project { right: 1.5rem; }
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 6rem 1.25rem 8rem;
+  }
+
+  .hero__status,
+  .hero__blurb {
+    position: static;
+  }
+
+  .hero__project {
+    position: relative;
+    inset: auto;
+  }
+
+  .hero__status {
+    order: -1;
+    align-self: stretch;
+  }
+
+  .hero__headline { align-self: flex-start; }
+
+  .hero__stickers {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 1.4rem;
+    margin-top: 1.6rem;
+    padding-left: 0.8rem;
+  }
+
+  .sticker { position: relative; inset: auto; }
+
+  .hero__blurb {
+    align-self: flex-start;
+    font-size: 1.8rem;
+  }
+
+  .hero__project {
+    align-self: stretch;
+    width: auto;
+    margin-top: 0.8rem;
+  }
+}

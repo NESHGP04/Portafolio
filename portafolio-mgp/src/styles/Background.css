@@ -1,0 +1,33 @@
+.hills-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #2b6aa3;
+  pointer-events: none;
+}
+
+.photo-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #4f8fbf;
+  pointer-events: none;
+}
+
+.photo-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  filter: saturate(1.35) contrast(1.05) brightness(1.05);
+}
+
+/* oscurece para que el texto blanco se lea */
+.photo-bg__shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 40, 30, 0.22), rgba(10, 40, 30, 0.32));
+}
