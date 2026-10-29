@@ -1,4 +1,4 @@
-import myPhoto from '@assets/Yo.JPG';
+import myPhoto from '@assets/YO2.jpeg';
 import resumeFile from '@assets/CV Marinés garcía.pdf';
 import '@styles/About.css';
 

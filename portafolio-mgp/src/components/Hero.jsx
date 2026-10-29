@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import myPhoto from '@assets/Yo.JPG';
+import myPhoto from '@assets/YO_.jpeg';
 import ProjectLink from '@components/ProjectLink';
 import { projects } from '@/data/profile';
 import '@styles/Hero.css';
